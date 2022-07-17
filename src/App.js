@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom"; // component imports
+import { BrowserRouter, Routes, Route } from "react-router-dom"; // component imports
 import Navbar from "./components/NavBar";
 // styling imports
 import "./App.css";
@@ -9,11 +9,13 @@ import AddProperty from "./components/AddProperty";
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Routes>
-        <Route exact path="/properties" element={Properties} />
-        <Route exact path="/add-property" element={AddProperty} />
-      </Routes>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route exact path="/properties" element={<Properties />} />
+          <Route exact path="/add-property" element={<AddProperty />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

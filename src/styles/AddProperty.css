@@ -1,0 +1,14 @@
+.add-property {
+  height: calc(100% - 90px);
+  width: 100vw;
+  top: 90px;
+  position: relative;
+}
+
+.add-property-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 200px;
+}
